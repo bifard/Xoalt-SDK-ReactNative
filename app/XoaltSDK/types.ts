@@ -5,7 +5,7 @@ export type XoaltClickEvent = {
   prebidId: string;
 };
 
-export type XoaltViewProps = ViewProps & {
+export type XoaltViewProps = {
   width: number;
   height: number;
   prebidId: string;

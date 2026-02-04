@@ -194,9 +194,7 @@ export function XoaltView(props: XoaltViewProps) {
 
   return (
     <View
-      style={{
-        ...styles.container,
-      }}
+      style={styles.container}
       onLayout={event => {
         const { width: w } = event.nativeEvent.layout;
         setLayoutWidth(w);
