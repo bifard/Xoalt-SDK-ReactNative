@@ -18,10 +18,22 @@ const Tab = createBottomTabNavigator();
 
 const Tabs = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Home" component={HomeScreen} />
-    <Tab.Screen name="First" component={FirstScreen} />
-    <Tab.Screen name="Second" component={SecondScreen} />
-    <Tab.Screen name="Debug" component={DebugScreen} />
+    <Tab.Screen
+      name='Home'
+      component={HomeScreen}
+    />
+    <Tab.Screen
+      name='First'
+      component={FirstScreen}
+    />
+    <Tab.Screen
+      name='Second'
+      component={SecondScreen}
+    />
+    <Tab.Screen
+      name='Debug'
+      component={DebugScreen}
+    />
   </Tab.Navigator>
 );
 
@@ -29,13 +41,22 @@ const RootNavigator = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name='Home'
         component={Tabs}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="First" component={FirstScreen} />
-      <Stack.Screen name="Second" component={SecondScreen} />
-      <Stack.Screen name="Debug" component={DebugScreen} />
+      <Stack.Screen
+        name='First'
+        component={FirstScreen}
+      />
+      <Stack.Screen
+        name='Second'
+        component={SecondScreen}
+      />
+      <Stack.Screen
+        name='Debug'
+        component={DebugScreen}
+      />
     </Stack.Navigator>
   );
 };

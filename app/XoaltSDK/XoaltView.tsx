@@ -69,17 +69,11 @@ const fetchBanner = async (
   };
 
   try {
-    const response = await fetch(
-      'https://hb.xoalt.com/x-simb/',
-      requestOptions,
-    );
+    const response = await fetch('https://hb.xoalt.com/x-simb/', requestOptions);
     const result = await response.json();
 
     if (onFetched) {
-      onFetched(
-        JSON.stringify(requestOptions, null, 2),
-        JSON.stringify(result, null, 2),
-      );
+      onFetched(JSON.stringify(requestOptions, null, 2), JSON.stringify(result, null, 2));
     }
 
     const seatBid = result.seatbid[0];
@@ -166,12 +160,7 @@ export function XoaltView(props: XoaltViewProps) {
   );
 
   useEffect(() => {
-    fetchBanner(
-      props.width,
-      props.height,
-      props.prebidId,
-      props.onFetched,
-    ).then(_html => {
+    fetchBanner(props.width, props.height, props.prebidId, props.onFetched).then(_html => {
       setHtml(_html);
     });
   }, [props.width, props.height, props.prebidId]);
@@ -234,7 +223,7 @@ export function XoaltView(props: XoaltViewProps) {
         injectedJavaScript={injected}
         scalesPageToFit={false}
         javaScriptEnabled
-        contentMode="mobile"
+        contentMode='mobile'
       />
     </View>
   );

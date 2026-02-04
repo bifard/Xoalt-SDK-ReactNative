@@ -36,7 +36,7 @@ export function DebugScreen() {
   return (
     <ScrollView
       style={[styles.container]}
-      contentInsetAdjustmentBehavior="automatic"
+      contentInsetAdjustmentBehavior='automatic'
     >
       <View style={styles.controls}>
         <Text style={styles.output}>
@@ -49,34 +49,37 @@ export function DebugScreen() {
         <Text style={styles.label}>Width</Text>
         <TextInput
           style={styles.input}
-          placeholder="Enter width"
+          placeholder='Enter width'
           value={tempWidth}
           onChangeText={setTempWidth}
-          autoCapitalize="none"
-          keyboardType="numeric"
+          autoCapitalize='none'
+          keyboardType='numeric'
         />
 
         <Text style={styles.label}>Height</Text>
         <TextInput
           style={styles.input}
-          placeholder="Enter height"
+          placeholder='Enter height'
           value={tempHeight}
           onChangeText={setTempHeight}
-          autoCapitalize="none"
-          keyboardType="numeric"
+          autoCapitalize='none'
+          keyboardType='numeric'
         />
 
         <Text style={styles.label}>ID</Text>
         <TextInput
           style={styles.input}
-          placeholder="Enter ID"
+          placeholder='Enter ID'
           value={tempId}
           onChangeText={setTempId}
-          autoCapitalize="none"
-          keyboardType="numeric"
+          autoCapitalize='none'
+          keyboardType='numeric'
         />
 
-        <Button title="Apply" onPress={handleApply} />
+        <Button
+          title='Apply'
+          onPress={handleApply}
+        />
       </View>
 
       <View style={styles.controls}>
