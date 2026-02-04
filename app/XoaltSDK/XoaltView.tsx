@@ -1,22 +1,16 @@
 import React, { useEffect } from 'react';
-import { Dimensions, StyleSheet, View, ViewProps } from 'react-native';
+import { Dimensions, StyleSheet, View } from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import uuid from 'react-native-uuid';
 import WebView from 'react-native-webview';
 import { XoaltService } from './XoaltService.ts';
-
-type XoaltViewProps = ViewProps & {
-  width: number;
-  height: number;
-  prebidId: string;
-  onFetched?: (request: string, response: string) => void;
-};
+import { OnFetchedCallback, XoaltViewProps } from './types.ts';
 
 const fetchBanner = async (
   width: number,
   height: number,
   prebidId: string,
-  onFetched?: (request: string, response: string) => void,
+  onFetched?: OnFetchedCallback,
 ) => {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');

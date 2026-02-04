@@ -1,4 +1,4 @@
-import { XoaltClickEvent } from './XoaltClickEvent.type.ts';
+import { XoaltClickEvent } from './types';
 
 export class XoaltService {
   private static instance: XoaltService | null;
