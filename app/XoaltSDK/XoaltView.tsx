@@ -75,9 +75,9 @@ export function XoaltView(props: XoaltViewProps) {
 
   const handleNavigation = (request: any) => {
     const url = request.url;
+    // TODO: не проработан пограничный случай, когда домен в XoaltService указан без "www.", а url с "www."
     if (url.startsWith(XoaltService.getDiscoveryDomain())) {
       XoaltService.onClickBanner({ url, prebidId: props.prebidId });
-
       return false;
     }
 
