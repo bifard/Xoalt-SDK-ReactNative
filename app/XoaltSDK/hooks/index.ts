@@ -1,0 +1,1 @@
+export { useFetchBanner } from './useFetchBanner';
